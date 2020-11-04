@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_first_fragment"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.thdz.customviewdemo.view.BerMan
+                android:id="@+id/berman_1"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                app:skinColor="@color/color1"
+                app:text="大B" />
+
+            <com.thdz.customviewdemo.view.BerMan
+                android:id="@+id/berman_2"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_below="@+id/berman_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:skinColor="@color/color2"
+                app:text="罩B" />
+
+            <com.thdz.customviewdemo.view.BerMan
+                android:id="@+id/berman_3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/berman_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:skinColor="@color/color3"
+                app:text="大炮" />
+
+            <com.thdz.customviewdemo.view.BerMan
+                android:id="@+id/berman_4"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_below="@+id/berman_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:skinColor="@color/color4"
+                app:text="肥肠" />
+
+            <com.thdz.customviewdemo.view.BerMan
+                android:id="@+id/berman_5"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/berman_4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:skinColor="@color/color5"
+                app:text="激光" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
